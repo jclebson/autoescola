@@ -5,6 +5,7 @@ import BgHighwayImage from "./assets/bg-highway.jpg";
 import BgCarImage from "./assets/bg-car.jpg";
 import Heading from "../Components/Heading";
 import { text } from "@storybook/addon-knobs";
+import Button from "../Components/Button";
 
 export default {
   title: "Components/Hero",
@@ -33,5 +34,8 @@ export const withList = () => (
         Impedit inventore debitis modi, quis labore alias doloribus corporis
       </li>
     </ul>
+    <Button color="primary" variant="outlined">
+      Matricule-se agora
+    </Button>
   </Hero>
 );
