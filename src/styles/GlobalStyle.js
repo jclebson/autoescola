@@ -4,8 +4,6 @@ import { createGlobalStyle } from "styled-components";
 
 import { BreakpointSizes, breakAt } from "./Breakpoints";
 
-const colorYellow = "#ffc107";
-
 const GlobalStyle = createGlobalStyle`
   html {
     font-family: "Poppins", sans-serif;
@@ -29,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 2px;
 
     strong {
-      color: ${colorYellow};
+      color: ${(props) => props.theme.colors.primary.main};
     }
   }
 
