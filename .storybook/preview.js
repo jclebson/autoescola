@@ -2,8 +2,8 @@ import { addDecorator, addParameters } from "@storybook/react";
 import { select } from "@storybook/addon-knobs";
 import React from "react";
 
-import GlobalStyle from "../src/styles/GlobalStyle";
-import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider";
+import GlobalStyle from "../src/Styles/GlobalStyle";
+import ThemeProvider, { ThemeNames } from "../src/Styles/ThemeProvider";
 
 addDecorator((storyFn) => (
   <React.Fragment>

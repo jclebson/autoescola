@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
-import { breakAt, BreakpointSizes } from "styles/Breakpoints";
+import { breakAt, BreakpointSizes } from "Styles/Breakpoints";
 
 const breakColumnAt = (size) => (props) =>
   props[size] &&
