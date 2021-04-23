@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-//#region
+//#region CardBody
 const StyledBody = styled.div`
   padding: 16px;
 
@@ -24,7 +24,7 @@ CardBody.propTypes = {
 };
 //#endregion
 
-//#region
+//#region CardMedia
 const StyledMedia = styled.div`
   background-image: url(${(props) => props.image});
   background-position: center center;
@@ -45,10 +45,11 @@ CardMedia.propTypes = {
 };
 //#endregion
 
-//#region
+//#region Card
 const StyledCard = styled.div`
   background-color: #fff;
   border-radius: 4px;
+  overflow: hidden;
 `;
 
 const Card = ({ children }) => {
