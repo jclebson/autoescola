@@ -1,0 +1,67 @@
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+
+//#region
+const StyledBody = styled.div`
+  padding: 16px;
+
+  h6 {
+    margin-top: 0;
+  }
+`;
+
+export const CardBody = ({ children }) => {
+  return <StyledBody>{children}</StyledBody>;
+};
+
+CardBody.defaultProps = {
+  children: undefined,
+};
+
+CardBody.propTypes = {
+  children: PropTypes.node,
+};
+//#endregion
+
+//#region
+const StyledMedia = styled.div`
+  background-image: url(${(props) => props.image});
+  background-position: center center;
+  background-size: cover;
+  min-height: 270px;
+`;
+
+export const CardMedia = ({ image }) => {
+  return <StyledMedia image={image} />;
+};
+
+CardMedia.defaultProps = {
+  image: undefined,
+};
+
+CardMedia.propTypes = {
+  image: PropTypes.string,
+};
+//#endregion
+
+//#region
+const StyledCard = styled.div`
+  background-color: #fff;
+  border-radius: 4px;
+`;
+
+const Card = ({ children }) => {
+  return <StyledCard>{children}</StyledCard>;
+};
+
+Card.defaultProps = {
+  children: undefined,
+};
+
+Card.propTypes = {
+  children: PropTypes.node,
+};
+
+export default Card;
+//#endregion

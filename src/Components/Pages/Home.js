@@ -9,6 +9,45 @@ import Feature from "Components/Atoms/Feature";
 import Section from "Components/Molecules/Section";
 import Footer from "Components/Organisms/Footer";
 import { FaAccessibleIcon, FaCar, FaKey, FaMapMarkedAlt } from "react-icons/fa";
+import ProductGrid from "Components/Organisms/ProductGrid";
+import ServImage01 from "Assets/serv-01.jpg";
+import ServImage02 from "Assets/serv-02.jpg";
+import ServImage03 from "Assets/serv-03.jpg";
+import ServImage04 from "Assets/serv-04.jpg";
+import ServImage05 from "Assets/serv-05.jpg";
+
+const products = [
+  {
+    id: 1,
+    title: "1ª Habilitação Carro e Moto",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: ServImage01,
+  },
+  {
+    id: 2,
+    title: "1ª Habilitação Carro",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: ServImage02,
+  },
+  {
+    id: 3,
+    title: "1ª Habilitação Moto",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: ServImage03,
+  },
+  {
+    id: 4,
+    title: "Mudança de Categoria Caminhão",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: ServImage04,
+  },
+  {
+    id: 5,
+    title: "Aulas Avulsas",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: ServImage05,
+  },
+];
 
 const Home = () => {
   return (
@@ -55,6 +94,7 @@ const Home = () => {
         <Heading>
           <h2>Conheça nossos serviços</h2>
         </Heading>
+        <ProductGrid products={products} />
       </Section>
 
       <Section>
