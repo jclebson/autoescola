@@ -15,6 +15,7 @@ import ServImage02 from "Assets/serv-02.jpg";
 import ServImage03 from "Assets/serv-03.jpg";
 import ServImage04 from "Assets/serv-04.jpg";
 import ServImage05 from "Assets/serv-05.jpg";
+import Accordion, { AccordionGroup } from "Components/Atoms/Accordion";
 
 const products = [
   {
@@ -123,6 +124,22 @@ const Home = () => {
         <Heading>
           <h2>Dúvidas recorrentes</h2>
         </Heading>
+        <AccordionGroup>
+          <Accordion title="Como eu renovo minha CNH?">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+            numquam nisi cumque quia beatae
+          </Accordion>
+
+          <Accordion title="Como faço a mudança de categoria?">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+            numquam nisi cumque quia beatae
+          </Accordion>
+
+          <Accordion title="Fui multado, e agora?">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+            numquam nisi cumque quia beatae
+          </Accordion>
+        </AccordionGroup>
       </Section>
 
       <Footer />
