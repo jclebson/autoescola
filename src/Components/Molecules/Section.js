@@ -3,6 +3,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import Container from "../Atoms/Container";
+import { BreakpointSizes, breakAt } from "Styles/Breakpoints";
 
 const Content = styled.div`
   padding: 40px 0;
@@ -11,6 +12,10 @@ const Content = styled.div`
     css`
       background-color: #f7f7f7;
     `};
+
+  ${breakAt(BreakpointSizes.md)} {
+    padding: 80px 0;
+  }
 
   h2 {
     margin-top: 0;
