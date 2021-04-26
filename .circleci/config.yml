@@ -4,18 +4,19 @@ orbs:
   node: circleci/node@4.3.0
 
 jobs:
-  build:
+  tests:
     docker:
       - image: cimg/node:16.0.0-browsers
     steps:
       - checkout
-      - node/install:
-          install-npm: false
-          install-yarn: true
+      - node/install-yarn
       - run: node --version
       - run: yarn --version
+      - node/install-packages:
+        pkg-manager: yarn
+      - run: yarn lint
 
 workflows:
   ci:
     jobs:
-      - build
+      - tests
