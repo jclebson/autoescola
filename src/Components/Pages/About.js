@@ -5,7 +5,7 @@ import Heading from "Components/Atoms/Heading";
 import Section from "Components/Molecules/Section";
 import Grid from "Components/Atoms/Grid";
 import HeroImage from "Assets/hero.jpg";
-import AboutImage from "Draws/About";
+import SvgAbout from "Draws/About";
 import styled from "styled-components";
 import Footer from "Components/Organisms/Footer";
 import InstImage1 from "Assets/instructors/inst1.jpg";
@@ -121,7 +121,7 @@ const About = () => {
                 placeat dolores consequatur obcaecati?
               </p>
               <ImageContainer>
-                <AboutImage />
+                <SvgAbout />
               </ImageContainer>
             </div>
           </Grid>
