@@ -16,6 +16,7 @@ import ServImage03 from "Assets/serv-03.jpg";
 import ServImage04 from "Assets/serv-04.jpg";
 import ServImage05 from "Assets/serv-05.jpg";
 import Accordion, { AccordionGroup } from "Components/Atoms/Accordion";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -111,7 +112,9 @@ const Home = () => {
               cupiditate tenetur voluptatem nulla.
             </p>
             <div>
-              <Button color="primary">Saiba mais</Button>
+              <Button as={Link} to="/sobre" color="primary">
+                Saiba mais
+              </Button>
             </div>
           </div>
           <div>

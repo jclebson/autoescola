@@ -4,17 +4,20 @@ import Hero from "Components/Molecules/Hero";
 import Heading from "Components/Atoms/Heading";
 import Section from "Components/Molecules/Section";
 import Grid from "Components/Atoms/Grid";
-import HeroImage from "Assets/hero.jpg";
-import SvgAbout from "Draws/About";
 import styled from "styled-components";
 import Footer from "Components/Organisms/Footer";
+import Card, { CardMedia, CardMediaDescription } from "Components/Atoms/Card";
+import BreadCrumb from "Components/Atoms/BreadCrumb";
+import { useScrollToTop } from "Hooks/Scroll";
+
+import HeroImage from "Assets/hero.jpg";
+import SvgAbout from "Draws/About";
 import InstImage1 from "Assets/instructors/inst1.jpg";
 import InstImage2 from "Assets/instructors/inst2.jpg";
 import InstImage3 from "Assets/instructors/inst3.jpg";
 import InstImage4 from "Assets/instructors/inst4.jpg";
 import InstImage5 from "Assets/instructors/inst5.jpg";
 import InstImage6 from "Assets/instructors/inst6.jpg";
-import Card, { CardMedia, CardMediaDescription } from "Components/Atoms/Card";
 
 const ImageContainer = styled.div`
   svg {
@@ -61,6 +64,8 @@ const instructors = [
 ];
 
 const About = () => {
+  useScrollToTop();
+
   return (
     <div>
       <React.Fragment>
@@ -68,6 +73,9 @@ const About = () => {
           <Heading>
             <h1>Nossa Auto Escola</h1>
           </Heading>
+          <BreadCrumb
+            items={[{ label: "Início", link: "/" }, { label: "Sobre" }]}
+          />
         </Hero>
         <Section>
           <Grid md={2}>

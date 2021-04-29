@@ -1,16 +1,19 @@
 import { addDecorator, addParameters } from "@storybook/react";
 import { select } from "@storybook/addon-knobs";
 import React from "react";
+import { MemoryRouter as Router } from "react-router-dom";
 
 import GlobalStyle from "../src/Styles/GlobalStyle";
 import ThemeProvider, { ThemeNames } from "../src/Styles/ThemeProvider";
 
 addDecorator((storyFn) => (
   <React.Fragment>
-    <ThemeProvider theme={select("Theme", ThemeNames, ThemeNames.light)}>
-      <GlobalStyle />
-      {storyFn()}
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={select("Theme", ThemeNames, ThemeNames.light)}>
+        <GlobalStyle />
+        {storyFn()}
+      </ThemeProvider>
+    </Router>
   </React.Fragment>
 ));
 
