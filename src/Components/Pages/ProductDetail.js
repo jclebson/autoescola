@@ -8,7 +8,6 @@ import Heading from "Components/Atoms/Heading";
 import Section from "Components/Molecules/Section";
 import Footer from "Components/Organisms/Footer";
 import Button from "Components/Atoms/Button";
-import { useScrollToTop } from "Hooks/Scroll";
 
 import HeroImage from "Assets/hero.jpg";
 import Callout, {
@@ -38,8 +37,6 @@ const PinnedItem = styled.li`
 `;
 
 const ProductDetail = (props) => {
-  useScrollToTop();
-
   return (
     <React.Fragment>
       <Hero image={HeroImage}>
