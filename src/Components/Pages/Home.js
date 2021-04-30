@@ -2,7 +2,6 @@ import React from "react";
 import Heading from "Components/Atoms/Heading";
 import Hero from "Components/Molecules/Hero";
 import Button from "Components/Atoms/Button";
-import HeroImage from "Assets/hero.jpg";
 import AboutVideo from "Assets/about.mp4";
 import Grid from "Components/Atoms/Grid";
 import Feature from "Components/Atoms/Feature";
@@ -10,12 +9,14 @@ import Section from "Components/Molecules/Section";
 import Footer from "Components/Organisms/Footer";
 import { FaAccessibleIcon, FaCar, FaKey, FaMapMarkedAlt } from "react-icons/fa";
 import ProductGrid from "Components/Organisms/ProductGrid";
+import HeroImage from "Assets/hero.jpg";
 import ServImage01 from "Assets/serv-01.jpg";
 import ServImage02 from "Assets/serv-02.jpg";
 import ServImage03 from "Assets/serv-03.jpg";
 import ServImage04 from "Assets/serv-04.jpg";
 import ServImage05 from "Assets/serv-05.jpg";
 import Accordion, { AccordionGroup } from "Components/Atoms/Accordion";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -111,11 +112,20 @@ const Home = () => {
               cupiditate tenetur voluptatem nulla.
             </p>
             <div>
-              <Button color="primary">Saiba mais</Button>
+              <Button as={Link} to="/sobre" color="primary">
+                Saiba mais
+              </Button>
             </div>
           </div>
           <div>
-            <video src={AboutVideo} width="100%" autoPlay loop muted />
+            <video
+              src={AboutVideo}
+              width="100%"
+              autoPlay
+              playsInline
+              loop
+              muted
+            />
           </div>
         </Grid>
       </Section>

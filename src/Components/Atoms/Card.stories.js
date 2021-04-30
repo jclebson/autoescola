@@ -1,6 +1,6 @@
 import Section from "Components/Molecules/Section";
 import React from "react";
-import Card, { CardBody, CardMedia } from "./Card";
+import Card, { CardBody, CardMedia, CardMediaDescription } from "./Card";
 import Heading from "./Heading";
 import Button from "./Button";
 import CardImage from "stories/assets/card-placeholder.jpg";
@@ -8,7 +8,7 @@ import CardImage from "stories/assets/card-placeholder.jpg";
 export default {
   title: "Components/Atoms/Card",
   component: Card,
-  subcomponents: { CardBody, CardMedia },
+  subcomponents: { CardBody, CardMedia, CardMediaDescription },
 };
 
 export const usage = () => {
@@ -53,6 +53,20 @@ export const withMedia = () => {
             </Button>
           </div>
         </CardBody>
+      </Card>
+    </Section>
+  );
+};
+
+export const onlyMedia = () => {
+  return (
+    <Section inverse>
+      <Card>
+        <CardMedia image={CardImage}>
+          <CardMediaDescription>
+            <h5>Descrição</h5>
+          </CardMediaDescription>
+        </CardMedia>
       </Card>
     </Section>
   );

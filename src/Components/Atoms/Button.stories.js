@@ -16,87 +16,53 @@ const Toolbar = styled.div`
   }
 `;
 
-export const usage = () => (
-  <div>
-    <p>Enabled:</p>
-    <Toolbar>
-      <Button {...evts}>Default</Button>
-      <Button {...evts} color="primary">
-        Primary
-      </Button>
-      <Button {...evts} color="danger">
-        Danger
-      </Button>
-    </Toolbar>
-    <p>Disabled:</p>
-    <Toolbar>
-      <Button disabled {...evts}>
-        Default
-      </Button>
-      <Button disabled {...evts} color="primary">
-        Primary
-      </Button>
-      <Button disabled {...evts} color="danger">
-        Danger
-      </Button>
-    </Toolbar>
-  </div>
-);
+const ButtonsWrapper = (props) => {
+  return (
+    <div>
+      <p>Enabled:</p>
+      <Toolbar>
+        <Button {...props} {...evts}>
+          Default
+        </Button>
+        <Button {...props} {...evts} color="primary">
+          Primary
+        </Button>
+        <Button {...props} {...evts} color="danger">
+          Danger
+        </Button>
+      </Toolbar>
 
-export const outlined = () => (
-  <div>
-    <p>Enabled:</p>
-    <Toolbar>
-      <Button variant="outlined" {...evts}>
-        Default
-      </Button>
-      <Button variant="outlined" {...evts} color="primary">
-        Primary
-      </Button>
-      <Button variant="outlined" {...evts} color="danger">
-        Danger
-      </Button>
-    </Toolbar>
-    <p>Disabled:</p>
-    <Toolbar>
-      <Button variant="outlined" disabled {...evts}>
-        Default
-      </Button>
-      <Button variant="outlined" disabled {...evts} color="primary">
-        Primary
-      </Button>
-      <Button variant="outlined" disabled {...evts} color="danger">
-        Danger
-      </Button>
-    </Toolbar>
-  </div>
-);
+      <p>As a Link:</p>
+      <Toolbar>
+        <Button as="a" href="#" {...props} {...evts}>
+          Default
+        </Button>
+        <Button as="a" href="#" {...props} {...evts} color="primary">
+          Primary
+        </Button>
+        <Button as="a" href="#" {...props} {...evts} color="danger">
+          Danger
+        </Button>
+      </Toolbar>
 
-export const link = () => (
-  <div>
-    <p>Enabled:</p>
-    <Toolbar>
-      <Button variant="link" {...evts}>
-        Default
-      </Button>
-      <Button variant="link" {...evts} color="primary">
-        Primary
-      </Button>
-      <Button variant="link" {...evts} color="danger">
-        Danger
-      </Button>
-    </Toolbar>
-    <p>Disabled:</p>
-    <Toolbar>
-      <Button variant="link" disabled {...evts}>
-        Default
-      </Button>
-      <Button variant="link" disabled {...evts} color="primary">
-        Primary
-      </Button>
-      <Button variant="link" disabled {...evts} color="danger">
-        Danger
-      </Button>
-    </Toolbar>
-  </div>
-);
+      <p>Disabled:</p>
+      <Toolbar>
+        <Button {...props} disabled {...evts}>
+          Default
+        </Button>
+        <Button {...props} disabled {...evts} color="primary">
+          Primary
+        </Button>
+        <Button {...props} disabled {...evts} color="danger">
+          Danger
+        </Button>
+      </Toolbar>
+    </div>
+  );
+};
+
+export const usage = () => <ButtonsWrapper />;
+
+export const outlined = () => <ButtonsWrapper variant="outlined" />;
+
+export const link = () => <ButtonsWrapper variant="link" />;
