@@ -1,8 +1,8 @@
 import React from "react";
 
 import Hero from "./Hero";
-import BgHighwayImage from "../../stories/assets/bg-highway.jpg";
-import BgCarImage from "../../stories/assets/bg-car.jpg";
+import BgHighwayImage from "../../Stories/assets/bg-highway.jpg";
+import BgCarImage from "../../Stories/assets/bg-car.jpg";
 import Heading from "../Atoms/Heading";
 import { text } from "@storybook/addon-knobs";
 import Button from "../Atoms/Button";
