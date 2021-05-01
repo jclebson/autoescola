@@ -16,7 +16,7 @@ import Callout, {
 } from "Components/Atoms/Callout";
 import SvgSpeed from "Draws/Speed";
 import BreadCrumb from "Components/Atoms/BreadCrumb";
-import ProductType from "Types/ProductType";
+import ProductType from "Models/Types/ProductType";
 
 const PinnedList = styled.ul`
   list-style-type: none;

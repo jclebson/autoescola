@@ -13,7 +13,7 @@ import ProductGrid from "Components/Organisms/ProductGrid";
 import HeroImage from "Assets/hero.jpg";
 import Accordion, { AccordionGroup } from "Components/Atoms/Accordion";
 import { Link } from "react-router-dom";
-import ProductType from "Types/ProductType";
+import ProductType from "Models/Types/ProductType";
 
 const Home = ({ products }) => {
   return (
