@@ -12,8 +12,3 @@ test("renders About page", () => {
   const linkElement = screen.getByText(/Conheça nossos professores/i);
   expect(linkElement).toBeInTheDocument();
 });
-
-test("scrolls to top in first render", () => {
-  render(<About />);
-  expect(window.scrollTo).toBeCalledTimes(1);
-});

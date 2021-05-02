@@ -1,5 +1,4 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaIdCard, FaHome, FaScroll } from "react-icons/fa";
 
@@ -8,7 +7,6 @@ import Heading from "Components/Atoms/Heading";
 import Section from "Components/Molecules/Section";
 import Footer from "Components/Organisms/Footer";
 import Button from "Components/Atoms/Button";
-import { useScrollToTop } from "Hooks/Scroll";
 
 import HeroImage from "Assets/hero.jpg";
 import Callout, {
@@ -18,6 +16,7 @@ import Callout, {
 } from "Components/Atoms/Callout";
 import SvgSpeed from "Draws/Speed";
 import BreadCrumb from "Components/Atoms/BreadCrumb";
+import ProductType from "Models/Types/ProductType";
 
 const PinnedList = styled.ul`
   list-style-type: none;
@@ -37,20 +36,18 @@ const PinnedItem = styled.li`
   }
 `;
 
-const ProductDetail = (props) => {
-  useScrollToTop();
-
+const ProductDetail = ({ product }) => {
   return (
     <React.Fragment>
       <Hero image={HeroImage}>
         <Heading>
-          <h1>Nome do serviço</h1>
+          <h1>{product.title}</h1>
         </Heading>
         <BreadCrumb
           items={[
             { label: "Início", link: "/" },
-            { label: "Serviços" },
-            { label: "Nome do serviço" },
+            { label: "Serviços", link: `/servicos/${product.slang}` },
+            { label: product.title },
           ]}
         />
       </Hero>
@@ -117,8 +114,12 @@ const ProductDetail = (props) => {
   );
 };
 
-/* ProductDetail.defaultProps = {};
+ProductDetail.defaultProps = {
+  product: {},
+};
 
-ProductDetail.propTypes = {}; */
+ProductDetail.propTypes = {
+  product: ProductType,
+};
 
 export default ProductDetail;

@@ -8,7 +8,6 @@ import styled from "styled-components";
 import Footer from "Components/Organisms/Footer";
 import Card, { CardMedia, CardMediaDescription } from "Components/Atoms/Card";
 import BreadCrumb from "Components/Atoms/BreadCrumb";
-import { useScrollToTop } from "Hooks/Scroll";
 
 import HeroImage from "Assets/hero.jpg";
 import SvgAbout from "Draws/About";
@@ -64,8 +63,6 @@ const instructors = [
 ];
 
 const About = () => {
-  useScrollToTop();
-
   return (
     <div>
       <React.Fragment>
